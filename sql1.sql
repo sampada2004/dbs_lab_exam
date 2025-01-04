@@ -14,3 +14,11 @@ select distinct(sname) from sailors s , reserves r where s.sid=r.sid ;
 select s.sid from sailors s,reserves r,boats b where s.sid=r.sid and r.bid=b.bid and b.colour in ("green","red"); 
 -- 3)
 select distinct s.sid from sailors s, reserves r where s.sid not in (select r.sid from reserves r);
+
+#answers
+1)s1
+2)111
+3)112
+113
+114
+115
