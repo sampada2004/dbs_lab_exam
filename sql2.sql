@@ -45,3 +45,15 @@ select fname,lname from employee  where salary>all(select salary from employee w
 select essn from works_on where pno in (1,2,3);
 -- 3)
 select sum(hours),pno from works_on group by pno;
+
+#answers
+1)Jane	Smith
+2)123456789
+  123456789
+  987654321
+  112233445
+3)50	1
+  35	2
+  45	3
+  30	4
+  50	5
