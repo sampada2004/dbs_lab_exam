@@ -59,3 +59,24 @@ where  o.Oid=oi.oid and c.custid=o.custid and oi.oid!=10;
  --   Betty
   --  Jughead
   --  Cheryl
+
+
+-- 4)
+select c.cname from customer c where(select count(o.oid) from order1 o where o.custid=c.custid )>=2;
+
+-- 5)
+select odate,sum(ord_amt) from order1 group by odate;
+
+-- 6)
+Select * 
+from CUSTOMER c,ORDER1 o 
+where c.custid=o.custid and ord_amt in(select max(ord_amt) from ORDER1);
+
+-- Archie
+
+-- 2016-06-01	1000
+--2016-06-03	5000
+--2016-06-05	4000
+--2017-06-05	5000
+
+-- 5	Cheryl	Mysore	5	5	5000	2017-06-05
